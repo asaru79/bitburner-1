@@ -19,12 +19,12 @@ export async function main(ns) {
 
   if (homeRam >= 32) {
     ns.tprint(`[${localeHHMMSS()}] Spawning spider.ns`)
-    await ns.run('spider.ns', 1, 'mainHack.ns')
+    await ns.run('spider.ns', 1, 'mainHack.js')
     await ns.sleep(3000)
     ns.tprint(`[${localeHHMMSS()}] Spawning playerServers.ns`)
-    ns.spawn('playerServers.ns', 1)
+    ns.spawn('playerServers.js', 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning spider.ns`)
-    ns.spawn('spider.ns', 1, 'mainHack.ns')
+    ns.spawn('spider.js', 1, 'mainHack.js')
   }
 }

@@ -5,16 +5,16 @@ const settings = {
   },
 }
 const scriptsToKill = [
-  'mainHack.ns',
-  'spider.ns',
-  'grow.ns',
-  'hack.ns',
-  'weaken.ns',
-  'playerServers.ns',
-  'runHacking.ns',
-  'initHacking.ns',
+  'mainHack.js',
+  'spider.js',
+  'grow.js',
+  'hack.js',
+  'weaken.js',
+  'playerServers.js',
+  'runHacking.js',
+  'initHacking.js',
   'start.ns',
-  'find.ns',
+  'find.js',
 ]
 
 function getItem(key) {
@@ -46,7 +46,7 @@ export async function main(ns) {
 
   if (!serverMap || serverMap.lastUpdate < new Date().getTime() - settings.mapRefreshInterval) {
     ns.tprint(`[${localeHHMMSS()}] Spawning spider.ns`)
-    ns.spawn('spider.ns', 1, 'killAll.ns')
+    ns.spawn('spider.js', 1, 'killAll.js')
     ns.exit()
     return
   }
@@ -70,6 +70,6 @@ export async function main(ns) {
     ns.spawn(scriptToRunAfter, 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning runHacking.ns`)
-    ns.spawn('runHacking.ns', 1)
+    ns.spawn('runHacking.js', 1)
   }
 }

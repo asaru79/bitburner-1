@@ -1,4 +1,4 @@
-import { settings, setItem } from 'common.ns'
+import { settings, setItem } from 'src/common.js'
 
 const hackPrograms = ['BruteSSH.exe', 'FTPCrack.exe', 'relaySMTP.exe', 'HTTPWorm.exe', 'SQLInject.exe']
 
@@ -143,7 +143,7 @@ export async function main(ns) {
 
   if (!scriptToRunAfter) {
     ns.tprint(`[${localeHHMMSS()}] Spawning mainHack.ns`)
-    ns.spawn('mainHack.ns', 1)
+    ns.spawn('mainHack.js', 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter}`)
     ns.spawn(scriptToRunAfter, 1)
