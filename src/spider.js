@@ -34,7 +34,7 @@ function localeHHMMSS(ms = 0) {
 }
 
 export async function main(ns) {
-  ns.tprint(`[${localeHHMMSS()}] Starting spider.ns`)
+  ns.tprint(`[${localeHHMMSS()}] Starting spider.js`)
 
   const scriptToRunAfter = ns.args[0]
 
@@ -142,7 +142,7 @@ export async function main(ns) {
   setItem(settings().keys.serverMap, serverMap)
 
   if (!scriptToRunAfter) {
-    ns.tprint(`[${localeHHMMSS()}] Spawning mainHack.ns`)
+    ns.tprint(`[${localeHHMMSS()}] Spawning mainHack.js`)
     ns.spawn('mainHack.js', 1)
   } else {
     ns.tprint(`[${localeHHMMSS()}] Spawning ${scriptToRunAfter}`)
